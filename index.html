@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sorpresa de Reyes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(180deg, #0aa2c0, #0a6cc0);
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+    }
+    .container {
+        padding: 40px 20px;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    img {
+        max-width: 90%;
+        border-radius: 20px;
+        margin: 20px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background-color: gold;
+        animation: fall 5s linear infinite;
+        top: -10px;
+    }
+    @keyframes fall {
+        to {
+            transform: translateY(110vh) rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎁 ¡Sorpresa de Reyes! 🎁</h1>
+    <p>Querida mamá,</p>
+
+    <h2>✈️ Viaje a la isla de La Palma 🏝️</h2>
+    <p>Con tu marido ❤️</p>
+
+    <img src="https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/canarias/pn-caldera-taburiente-cresteria-la-palma-c-t-la-palma-saul-santos.jpg" alt="La Palma">
+
+    <p>
+        Prepárate para disfrutar de paisajes increíbles,<br>
+        tranquilidad, naturaleza y momentos inolvidables juntos.
+    </p>
+
+    <h2>💖 Te queremos muchísimo 💖</h2>
+</div>
+
+<script>
+    for (let i = 0; i < 40; i++) {
+        let confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        confetti.style.backgroundColor = ['#ffd700', '#ff69b4', '#ffffff'][Math.floor(Math.random()*3)];
+        document.body.appendChild(confetti);
+    }
+</script>
+
+</body>
+</html>
